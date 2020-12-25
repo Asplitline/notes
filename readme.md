@@ -19,9 +19,6 @@ git config --global user.email ambition292@163.com
 
 # 查看git配置信息
 git config --list
-
-# 查看远程仓库别名
-git remote -v
 ```
 
 ## git提交
@@ -47,13 +44,6 @@ git commit -a -m 提交信息
 # 查看提交记录
 git log` 
 
-# 添加readme.md
-# 创建readme.md 向其中插入 "first"
-echo "first" > readme.md
-
-# 删除文件 当前分支
-git rm -r 文件名
-
 ```
 
 ## git撤销
@@ -69,7 +59,28 @@ git rm --cached 文件
 # 将git仓库中指定的更新记录恢复出来，并且覆盖暂存区和工作目录
 # 版本回退 git log 查看commitID -> 注意版本从高到低
 git rest --hard commitID
+
  ```
+
+## git其他
+
+```shell
+
+# 查看远程仓库别名
+git remote -v
+
+# 添加readme.md
+# 创建readme.md 向其中插入 "first"
+echo "first" > readme.md
+
+# 删除文件 当前分支
+git rm -r 文件名
+
+# 命令参数列表
+git 命令 -h # 简略
+git 命令 --help #详细
+
+```
 
 ##  git分支
 
