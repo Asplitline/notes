@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/js/jquery.min.js"></script>
+    <script>
+        // 获取用户列表
+        $.ajax({
+            type: 'get',
+            url: '/users',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+        // 获取id为1用户
+        $.ajax({
+            type: 'get',
+            url: '/users/1',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+        // 添加用户
+        $.ajax({
+            type: 'post',
+            url: '/users',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+        // 删除id为1用户
+        $.ajax({
+            type: 'delete',
+            url: '/users/1',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+        // 修改id为1用户
+        $.ajax({
+            type: 'put',
+            url: '/users/1',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    </script>
+</body>
+
+</html>

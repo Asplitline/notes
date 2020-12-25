@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.引入模板引擎库文件 -->
+    <script src="/js/template-web.js"></script>
+</head>
+
+<body>
+    <div id="box"></div>
+    <!-- 2.准备模板 -->
+    <script type="text/html" id="tpl">
+        <h1>{{username}}</h1>
+    </script>
+    <script type="text/javascript">
+        // 3.模板和数据拼接 - (模板id,数据-对象类型) - 返回拼接好的字符串
+        var html = template('tpl', { username: 'lisi' });
+        document.getElementById('box').innerHTML = html;
+    </script>
+</body>
+
+</html>

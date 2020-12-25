@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-top: 60px;
+        }
+
+        .padding {
+            padding: 5px 0 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <input type="file" id="file">
+            <div class="padding" id="box">
+                <!-- <img src="" class="img-rounded img-responsive" id="preview"> -->
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%;" id="bar">0%</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var file = document.getElementById('file');
+        var box = document.getElementById('box');
+        var bar = document.getElementById('bar');
+        file.onchange = function () {
+            var formdata = new FormData();
+            // 将用户选择的文件追加到formData表单对象中
+            formdata.append('myfile', this.files[0]);
+            var xhr = new XMLHttpRequest();
+            xhr.open('post', 'http://localhost:3000/upload');
+            xhr.upload.onprogress = function (ev) {
+                // loaded - 以上传
+                // total - 总大小
+                var result = (ev.loaded / ev.total) * 100 + '%';
+                bar.style.width = result;
+                bar.innerHTML = result;
+            }
+
+            xhr.send(formdata);
+
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    console.log(xhr.responseText);
+                    var img = document.createElement('img');
+                    img.src = result.path;
+                    // 当图片加载完成
+                    img.onload = function () {
+                        box.appendChild(img);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

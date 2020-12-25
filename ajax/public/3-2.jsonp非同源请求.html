@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">发送jsonp</button>
+    <script>
+        function fn(data) {
+            console.log('客户端的fn函数被调用了')
+            console.log(data);
+        }
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            var script = document.createElement('script');
+            script.src = 'http://localhost:3001/test?callback=fn';
+            document.body.appendChild(script);
+            script.onload = function () {
+                document.body.removeChild(script);
+            }
+        }
+    </script>
+    <!-- 将非同源服务器端的请求地址写在script标签的src属性中 -->
+    <script src="http://localhost:3001/test?callback=fn"></script>
+
+</body>
+
+</html>

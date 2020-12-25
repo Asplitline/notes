@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <style>
+        .container {
+            padding-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-inline">
+            <div class="form-group">
+                <select class="form-control" id="province">
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="city">
+                    <option>请选择城市</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="area">
+                    <option>请选择县城</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script type="text/html" id="tplpro">
+        <option>请选择省份</option>
+        {{each province}}
+        <option value="{{$value.id}}">{{$value.name}}</option>
+		{{/each}}
+    </script>
+    <script type="text/html" id="tplcity">
+        <option>请选择城市</option>
+        {{each city}}
+        <option value="{{$value.id}}">{{$value.name}}</option>
+		{{/each}}
+    </script>
+    <script type="text/html" id="tplarea">
+        <option>请选择县城</option>
+        {{each area}}
+        <option value="{{$value.id}}">{{$value.name}}</option>
+		{{/each}}
+    </script>
+    <script>
+        var pro = document.getElementById('province');
+        var city = document.getElementById('city');
+        var area = document.getElementById('area');
+        ajax({
+            url: '/province',
+            success: function (data) {
+                var html = template('tplpro', { province: data });
+                pro.innerHTML = html;
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+
+        pro.onchange = function () {
+            var t = template('tplarea', { area: [] });
+            area.innerHTML = t;
+            ajax({
+                url: '/city',
+                data: {
+                    id: this.value
+                },
+                success: function (data) {
+                    var html = template('tplcity', { city: data });
+                    city.innerHTML = html;
+                }, error: function (err) {
+                    console.log(err);
+                }
+            })
+        }
+
+        city.onchange = function () {
+            ajax({
+                url: '/area',
+                data: {
+                    id: this.value
+                },
+                success: function (data) {
+                    var html = template('tplarea', { area: data });
+                    area.innerHTML = html;
+                }, error: function (err) {
+                    console.log(err);
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

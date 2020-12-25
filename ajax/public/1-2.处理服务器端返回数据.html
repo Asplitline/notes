@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.创建ajax对象
+        var xhr = new XMLHttpRequest();
+        // 2.开启请求 - 请求方式,请求地址
+        xhr.open('get', 'http://localhost:3000/02');
+        // 3.发送请求
+        xhr.send();
+        // 4.获取服务器数据响应到客户端
+        xhr.onload = function () {
+            // JSON字符串转对象
+            var text = JSON.parse(xhr.responseText);
+            console.log(text);
+        }
+        // #> 低版本ie中,同样的请求多次,只有第一次生效（浏览器缓存）
+        // xhr.open('get', 'http://localhost:3000/02?cache=' + Math.random());
+    </script>
+</body>
+
+</html>
