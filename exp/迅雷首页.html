@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* base */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .clearfix::before .clearfix::after {
+            content: "";
+            height: 0;
+            line-height: 0;
+            display: block;
+            visibility: hidden;
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        /* index */
+        /* header  */
+        /* left 0 right 0 居中 */
+        header {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: .3s ease;
+        }
+
+        header:hover {
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .xl-log {
+            float: left;
+            margin-top: 14px;
+            width: 78px;
+            height: 37px;
+        }
+
+        .xl-log img {
+            height: 100%;
+        }
+
+        .xl-nav {
+            text-align: right;
+        }
+
+        .xl-nav li {
+            display: inline-block;
+        }
+
+        .xl-nav li a {
+            position: relative;
+            display: inline-block;
+            line-height: 64px;
+            padding: 0 10px;
+            margin: 0 16px;
+            font-size: 14px;
+        }
+
+        .xl-nav li a::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            transition: all .3s linear;
+            transform: scale(0);
+        }
+
+        .xl-nav li:nth-child(1) a::after {
+            transform: scale(1);
+            background-color: #fff;
+        }
+
+        .xl-nav li a:hover::after {
+            transform: scale(1);
+            background-color: #fff;
+        }
+
+        /* home */
+
+        .home-inner {
+            position: relative;
+            width: 100%;
+            height: 1080px;
+            overflow: hidden;
+            background: url(xunlei/banner_bg.jpg) no-repeat top center;
+        }
+
+        .home-inner-c {
+            zoom: .6;
+        }
+
+        .banner-earth {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 730px;
+            height: 730px;
+            transform: translate(-50%, 0);
+            background: url(xunlei/earth01.png) no-repeat;
+        }
+
+        .earth-Z {
+            position: relative;
+            width: 720px;
+            height: 720px;
+            margin: 188px auto;
+            animation: rotcricle 2s linear infinite;
+        }
+
+        .earth-Z>i {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            margin: auto;
+        }
+
+        /* 720 */
+        .circleZ1 {
+            width: 722px;
+            height: 722px;
+            background: url(xunlei/spr_bannerPathway.png) no-repeat -2433px 0;
+        }
+
+        /* 650 */
+        .circleZ2 {
+            width: 652px;
+            height: 652px;
+            background: url(xunlei/spr_bannerPathway.png) no-repeat -2433px -737px;
+        }
+
+        @keyframes rotcricle {
+            0% {
+                transform: none;
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        /* TODO>> 横向转圈 */
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-inner clearfix">
+            <div class="xl-log">
+                <img src="xunlei/xl-logo2x.png" alt="">
+            </div>
+            <div class="xl-nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">区块链</a></li>
+                    <li><a href="#">广告服务</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">投资者关系</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="home-inner">
+            <div class="home-inner-c">
+                <div class="earth-box">
+                    <i class="banner-earth"></i>
+                </div>
+                <div class="earth-Z">
+                    <i class="circleZ1"></i>
+                    <i class="circleZ2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
