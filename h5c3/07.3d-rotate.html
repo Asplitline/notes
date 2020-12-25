@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 300px;
+        }
+
+        img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            transition: all .3s linear;
+        }
+
+        /* QUES>>多个旋转不同方向旋转，第一个会出问题 */
+        /* ANS>>视距的问题如果在屏幕正中，就不会出现这种问题 */
+        .pig1:hover {
+            transform: rotateX(45deg);
+            /* transform: rotate3d(1, 0, 0, 45deg); */
+        }
+
+        .pig2:hover {
+            transform: rotateY(45deg);
+            /* transform: rotate3d(0, 1, 0, 45deg); */
+        }
+
+        .pig3:hover {
+            transform: rotateZ(45deg);
+            /* transform: rotate3d(0, 0, 1, 45deg); */
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<img src="img/pig.jpg" alt="" class="pig1">
+<img src="img/pig.jpg" alt="" class="pig2">
+<img src="img/pig.jpg" alt="" class="pig3">
+
+</html>

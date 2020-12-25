@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background: url(img/vivo-bg.jpg) no-repeat center top;
+            background-size: cover;
+            position: relative;
+        }
+
+        .progress ul {
+            position: absolute;
+            left: 50%;
+            bottom: 70px;
+            transform: translate(-50%, 0);
+        }
+
+        .progress li {
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+
+        .progress li>span {
+            display: inline-block;
+            width: 46px;
+            height: 2px;
+            background-color: rgba(0, 0, 0, .2);
+            transition: height .0 ease-out;
+
+        }
+
+        .progress li>span::after {
+            content: "";
+            position: absolute;
+            top: 11px;
+            margin: 0;
+            width: 0;
+            height: 6px;
+            background-color: #666;
+            /* 鼠标离开后*/
+            transition: all .3s ease-out;
+
+        }
+
+        /* @keyframes pgs {
+            form {
+                width: 0;
+            }
+
+            to {
+                width: 46px;
+            }
+        } */
+
+        .progress li:hover>span {
+            height: 6px;
+        }
+
+        .progress li:hover>span::after {
+            height: 6px;
+            width: 46px;
+            transition: width 5s ease;
+            /* animation: pgs 4s linear forwards; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress">
+        <ul>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+    </div>
+</body>
+
+</html>
