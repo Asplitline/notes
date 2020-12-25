@@ -19,6 +19,9 @@ git config --global user.email ambition292@163.com
 
 # 查看git配置信息
 git config --list
+
+# 查看远程仓库别名
+git remote -v
 ```
 
 ## git提交
@@ -39,6 +42,8 @@ git add . # 工作目录所有文件添加暂存区
 git commit -m 提交信息  
 git commit -m 添加readme
 
+# 合并 add + commit
+git commit -a -m 提交信息
 # 查看提交记录
 git log` 
 
