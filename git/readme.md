@@ -93,6 +93,11 @@ git merge 来源分支
 
 # 删除分支（分支被合并后才允许删除） 强制删除
 git branch -d 分支名称
+
+git branch -a # 查看远端分支
+git branch -v # 显示分支提交信息
+#checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支
+git checkout -b dev origin/dev
  ```
 
 ### 暂时保存
