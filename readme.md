@@ -142,6 +142,7 @@ git checkout -b dev origin/dev
 > apply 可以指定恢复缓存 `git stash apply stash@{0}` 
 - 查看临时改动列表：`git stash list`
 - 查看stash文件区别：`git stash show`
+> -p --patch 查看更详细信息
 - 移除stash：`git stash drop stash@{0}`
 - 清空stash：`git stash clear`
 
@@ -167,6 +168,8 @@ git push -u 远程仓库地址别名 分支名称
  ```shell
  # 克隆远端数据仓库到本地
  git clone 仓库地址
+ # 远端代码
+ git clone -b 分支 仓库地址
  # 拉取最新版本
  git pull 远程仓库地址 分支名称
  ```
