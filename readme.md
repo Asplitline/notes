@@ -119,11 +119,33 @@ git checkout -b dev origin/dev
 
 暂时提取分支上所有的改动并存储，让开发人员得到一个干净的工作副本，临时转向其他工作。
 
+**默认情况**
+
+- 添加到暂存区的修改（staged changes）
+- Git跟踪的但并未添加到暂存区的修改（unstaged changes）
+不会缓存
+- 在工作目录中新的文件（untracked files）
+- 被忽略的文件（ignored files）
+
+> 使用-u或者--include-untracked可以stash untracked文件
+> 使用-a或者--all命令可以stash当前目录下的所有修改
+
+**stash命令**
+
 - 存储临时改动：`git stash`
-- 恢复改动：`git stash pop`
+> 添加笔记 git stash save 'this is stash'
+- 恢复缓存
+  - `git stash pop`
+  - `git stash apply`
+
+> pop会删除当前恢复缓存，apply不会
+> apply 可以指定恢复缓存 `git stash apply stash@{0}` 
+- 查看临时改动列表：`git stash list`
+- 查看stash文件区别：`git stash show`
+- 移除stash：`git stash drop stash@{0}`
+- 清空stash：`git stash clear`
 
 > 先提交到缓存区，才可以stash
->
 > 在恢复的时候注意当前分支是否为当初保存的分支
 
 # github
@@ -186,3 +208,14 @@ git push -u 远程仓库地址别名 分支名称
 不需要被git管理的文件名字添加到此文件中，在执行git命令的时候，git就会忽略这些文件
 > 文件名： **.gitignore**
 
+
+# vscode 配置 gitbash
+
+```shell
+# 命令行获取 git路径
+where git
+
+# settings.json中配置
+# "git.path": "D:\\git\\Git\\cmd\\git.exe" # 可选
+"terminal.integrated.shell.windows": "D:\\git\\Git\\bin\\bash.exe"
+```
