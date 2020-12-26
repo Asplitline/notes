@@ -1,0 +1,218 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    visibility: hidden;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.app {
+    height: 45px;
+}
+
+.app ul li {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    background-color: #333333;
+}
+
+.app ul li:nth-child(1) img {
+    width: 10px;
+}
+
+.app ul li:nth-child(2) img {
+    /* 图片文字对齐 */
+    vertical-align: middle;
+    width: 30px;
+}
+
+.app ul li:nth-child(3) {}
+
+.app ul li:nth-child(4) {
+    background-color: #f63515;
+}
+
+/* 8 10 57 25 */
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+}
+
+.search-wrap {
+    position: fixed;
+    height: 44px;
+    width: 100%;
+    /* overflow: hidden; */
+    min-width: 320px;
+    max-width: 640px;
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 44px;
+}
+
+.search-btn::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 16px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 16px;
+    margin: 14px 0 0 9px;
+}
+
+.search {
+    position: relative;
+    height: 30px;
+    margin: 7px 50px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.search-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    line-height: 44px;
+    color: #fff;
+}
+
+.jd-icon {
+    /* 精灵图+二倍图 */
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 20px;
+    height: 15px;
+    background: url(../images/jd-sprites.png) no-repeat;
+    background-size: 200px;
+}
+
+.jd-icon::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 26px;
+    height: 15px;
+    width: 1px;
+    background-color: #ccc;
+}
+
+.sou {
+    position: absolute;
+    top: 8px;
+    left: 48px;
+    width: 18px;
+    height: 15px;
+    background: url(../images/jd-sprites.png) no-repeat -82px 0;
+    background-size: 200px;
+}
+
+.slider img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.brand {
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.brand div {
+    float: left;
+    width: 33.33%;
+}
+
+.brand div a img {
+    width: 100%;
+}
+
+nav {
+    padding-top: 6px;
+}
+
+nav a {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav a img {
+    margin: 10px 0;
+    width: 40px;
+}
+
+nav a span {
+    display: block;
+}
+
+.news {
+    margin-top: 10px;
+}
+.news a {
+    float: left;
+    box-sizing: border-box;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+.news a:nth-child(n+2) {
+    border-left: 1px solid #ccc;
+    width: 25%;
+}
+
+.news img {
+    width: 100%;
+}

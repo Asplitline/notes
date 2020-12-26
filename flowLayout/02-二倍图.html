@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,
+    maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        /*
+            物理像素：分辨率
+            物理像素比：比值为2，1px像素=2个物理像素
+            问题：50*50图片，放到像素比为2的iphone8手机，会放大到100*100，图片会模糊
+            解决：（二倍图）放100*100图片，缩小到50*50
+         */
+        img:nth-child(2) {
+            width: 50px;
+            height: 50px;
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            background: url(images/apple100.jpg) no-repeat;
+            background-size: 50px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/apple50.jpg" alt="">
+    <img src="images/apple100.jpg" alt="">
+    <div></div>
+</body>
+
+</html>
