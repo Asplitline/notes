@@ -42,7 +42,7 @@ git commit -m 添加readme
 # 合并 add + commit
 git commit -a -m 提交信息
 # 查看提交记录
-git log` 
+git log
 
 ```
 
