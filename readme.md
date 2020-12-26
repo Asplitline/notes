@@ -101,7 +101,7 @@ git branch
 git branch 分支名称
 
 # 切换分支
-git checkout 分支名称` 
+git checkout 分支名称
 
 # 合并分支
 git merge 来源分支 
