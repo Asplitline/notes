@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff2') format('woff2'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    min-width: 320px;
+    max-width: 540px;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    background-color: #aabbcc;
+    color: #000;
+    margin: 0 auto;
+    background: #fafafc;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 搜索框 */
+
+.search-index {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    max-width: 540px;
+    top: 0;
+    height: 44px;
+    align-items: center;
+    z-index: 99;
+}
+
+.search-index div {
+    height: 28px;
+    line-height: 28px;
+    flex: 1;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 10px;
+    padding-left: 20px;
+}
+
+.search-index div::before {
+    content: '';
+}
+
+.search-index a {
+    display: flex;
+    height: 44px;
+    width: 51px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.search-index a::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/home-common-sprite2x@v7.15.png) no-repeat 0px -35px;
+    background-size: 20px auto;
+    margin: 0 auto;
+}
+
+.search-index a span {
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* focus */
+
+
+.focus a img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* local-nav */
+
+.local-nav {
+    display: flex;
+    position: relative;
+    /* 有定位 z-index才有效 */
+    margin: -30px 10px 0;
+    border-radius: 10px;
+    padding-bottom: 8px;
+    background-color: #fff;
+    z-index: 4;
+    box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav li a {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.local-nav a span[class^="icon-"] {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/home-fivemain-sprite2x@v7.15.png) no-repeat;
+    background-size: 40px auto;
+}
+
+.local-nav a span {
+    font-size: 12px;
+    /* 高度设置为字体大小 */
+    line-height: 1;
+}
+
+.local-nav li a .icon-local-around {
+    background-position: 0 -40px;
+}
+
+.local-nav li a .icon-local-food {
+    background-position: 0 -80px;
+}
+
+.local-nav li a .icon-local-oneday {
+    background-position: 0 -120px;
+}
+
+.local-nav li a .icon-local-strategy {
+    background-position: 0 -160px;
+}
+
+/* nav-entry */
+
+.nav-entry {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 6px 0;
+}
+
+.grid-nav {
+    display: flex;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+}
+
+.grid-nav a {
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.grid-nav a:nth-child(1) {
+    text-align: left;
+    border-left: none;
+}
+
+.grid-nav a:nth-child(1) span {
+    padding-left: 18px;
+}
+
+.grid-nav-hotel {
+    background: -webkit-linear-gradient(left, #fa5a56, #ffd252)
+}
+
+.grid-nav-hotel a {
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.grid-nav-hotel a:nth-child(1) {
+    background: url(../images/grid-nav-items-hotel@v7.15.png) bottom right no-repeat;
+    background-size: 73px auto;
+    flex: 3.1;
+}
+
+.grid-nav-hotel a:nth-child(2) {
+    background: url(../images/grid-nav-items-minsu@v7.15.png) bottom left no-repeat;
+    background-size: 37px auto;
+    flex: 2.3;
+}
+
+.grid-nav-hotel a:nth-child(3) {
+    background: url(../images/grid-nav-items-hot.png) bottom left no-repeat;
+    background-size: 242px auto;
+    color: #a05416;
+    flex: 4.6;
+}
+
+.grid-nav-flight {
+    background: -webkit-linear-gradient(left, #4b8fed, #53bced)
+}
+
+.grid-nav-flight a:nth-child(1) {
+    background: url(../images/grid-nav-items-flight@v7.15.png) bottom right no-repeat;
+    background-size: 80px auto;
+    flex: 3.1;
+}
+
+.grid-nav-flight a:nth-child(2) {
+    background: url(../images/grid-nav-items-train.png) bottom left no-repeat;
+    background-size: 37px auto;
+    flex: 2.3;
+}
+
+.grid-nav-flight a:nth-child(n+3) {
+    flex: 2.3;
+}
+
+.grid-nav-travel {
+    background: -webkit-linear-gradient(left, #35c2a9, #6bd55a)
+}
+
+.grid-nav-travel a {
+    border-bottom: none;
+}
+
+.grid-nav-travel a:nth-child(1) {
+    background: url(../images/grid-nav-items-travel@v7.15.png) bottom right no-repeat;
+    background-size: 88px auto;
+    flex: 3.1;
+}
+
+.grid-nav-travel a:nth-child(2) {
+    background: url(../images/grid-nav-items-dingzhi@v7.15.png) bottom left no-repeat;
+    background-size: 61px auto;
+    flex: 2.3;
+}
+
+.grid-nav-travel a:nth-child(n+3) {
+    flex: 2.3;
+}
+
+/* subnav */
+
+.subnav-entry {
+    margin: 10px 6px 0;
+}
+
+.subnav-entry ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subnav-entry li {
+    width: 20%;
+    height: 54px;
+}
+
+.subnav-entry a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subnav-entry a span {
+    font-size: 12px;
+    color: #222;
+}
+
+span[class^="subnav-icon-"] {
+    margin-top: 6px;
+    width: 28px;
+    height: 28px;
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat;
+    background-size: 28px auto;
+}
+
+.subnav-entry .subnav-icon-travel {
+    background-position: 0 0;
+}
+
+.subnav-entry .subnav-icon-wifi {
+    background-position: 0 -28px;
+}
+
+.subnav-entry .subnav-icon-insurance {
+    background-position: 0 -56px;
+}
+
+.subnav-entry .subnav-icon-shopping {
+    background-position: 0 -84px;
+}
+
+.subnav-entry .subnav-icon-guide {
+    background-position: 0 -112px;
+}
+
+.subnav-entry .subnav-icon-flight {
+    background-position: 0 -140px;
+}
+
+.subnav-entry .subnav-icon-card {
+    background-position: 0 -168px;
+}
+
+.subnav-entry .subnav-icon-creditcard {
+    background-position: 0 -196px;
+}
+
+.subnav-entry .subnav-icon-photograph {
+    background-position: 0 -224px;
+}
+
+.subnav-entry .subnav-icon-more {
+    background-position: 0 -252px;
+}
+
+.tool-box {
+    display: flex;
+    height: 60px;
+    border: 1.5px solid #ccc;
+    border-left: none;
+    border-right: none;
+    margin-top: 10px;
+}
+
+.tool-box a {
+    flex: 1;
+    font-size: 12px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-box i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+i.phone {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

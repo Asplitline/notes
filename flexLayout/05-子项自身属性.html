@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 400px;
+            height: 400px;
+            background-color: #aabbcc;
+            /* flex-wrap: wrap; */
+        }
+
+        div span {
+            /* 子元素设置权重会使换行失效 */
+            flex: 1;
+            width: 100px;
+            height: 100px;
+            background-color: #aaddcc;
+            border: 1px solid #000;
+            /* 默认，继承父容器align-items,没有父容器stretch */
+            /* align-self: auto; */
+            /* align-self: stretch; */
+            /* align-self: flex-start; */
+            /* align-self: flex-end; */
+            /* align-self: baseline; */
+
+        }
+
+        div span:nth-child(1) {
+            flex: 2;
+        }
+
+        div span:nth-of-type(n+4) {
+            /* 值越小，越靠前 */
+            order: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+
+</div>
+
+</html>

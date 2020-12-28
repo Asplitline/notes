@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 400px;
+            height: 400px;
+            background-color: #aabbcc;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            /* 等效写法 */
+            flex-flow: row wrap;
+            /* 默认 向上排列，如果要拉伸，子元素不给高度，给了高度会有间隙*/
+            /* align-content: stretch; */
+            /* 向上排列，为贴紧状态*/
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            /* align-content: center; */
+            /* align-content:space-between; */
+            /* align-content: space-around; */
+            align-content: space-evenly;
+        }
+
+        div span {
+            width: 100px;
+            height: 100px;
+            background-color: #aaddcc;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+
+</div>
+
+</html>

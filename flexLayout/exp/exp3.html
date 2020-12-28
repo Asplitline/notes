@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            width: 500px;
+            height: 400px;
+            background-color: #ddd;
+            /* 主 */
+            justify-content: space-around;
+            /* 侧 */
+            align-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .box div {
+            width: 150px;
+            height: 150px;
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<!-- 父盒子宽500，高400，父盒子内部有6个子盒子，
+        宽高为150*150，先需求为，将子盒子一排3个显示两排，
+        并且子盒子的左右间距相等，上下间距相等 -->
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

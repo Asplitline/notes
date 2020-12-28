@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    /* background-color: #aabbcc; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: #35424b;
+    background-color: #ebebeb;
+
+}
+
+ul {
+    list-style: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after, .clearfix::before {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* header */
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background-color: #44b181;
+    color: #fff;
+}
+
+
+.return {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    width: 120px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.return::after {
+    content: "";
+    position: absolute;
+    top: 36%;
+    left: -14%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+    border-right: none;
+    border-top: none;
+}
+
+.header h4 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 90px;
+    text-align: center;
+}
+
+.more {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    width: 26px;
+    height: 6px;
+    transform: translateY(-50%);
+    /* 二倍图 */
+    background: url(../images/more.png) no-repeat;
+    background-size: 26px 6px;
+}
+
+/* nav */
+
+.nav ul li {
+    float: left;
+    height: 84px;
+    line-height: 84px;
+    text-align: center;
+    width: 33.33%;
+    background-color: #fff;
+}
+
+.nav ul li a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #35424b;
+    font-size: 20px;
+}
+
+.nav ul li:nth-child(-n+2) a::after {
+    content: "";
+    position: absolute;
+    top: 41%;
+    right: 0%;
+    height: 20px;
+    width: 1px;
+    background-color: #ccc;
+}
+
+.nav .current {
+    position: relative;
+    color: #44b181;
+}
+
+.nav .current::before {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    height: 2px;
+    width: 60%;
+    background-color: #44b181;
+}
+
+/* banner */
+
+.banner {
+    width: 100%;
+}
+
+.banner ul li img {
+    width: 100%;
+}
+
+.info {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.info ul li {
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.info-item {
+    padding: 10px 10px;
+}
+
+.info-item h4 {
+    display: inline-block;
+    width: 90%;
+    height: 36px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+
+.info-item p {
+    float: left;
+    height: 26px;
+    text-align: center;
+}
+
+.user {
+    margin: 16px 0;
+}
+
+.name {
+    width: 16%;
+    border-right: 1px solid #ccc;
+}
+
+.brf {
+    font-weight: 600;
+    width: 40%;
+}
+
+.msg {
+    position: relative;
+    height: 120px;
+}
+
+.msg a {
+    position: absolute;
+}
+
+.msg a:nth-child(1) {
+    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.msg a:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../uploads/msg-bg.png) no-repeat top center;
+}
+
+.msg a:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+.msg span {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
+
+.footer {
+    position: fixed;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer ul li {
+    float: left;
+    width: 25%;
+    height: 80px;
+    text-align: center;
+    background-color: #f5f7f9;
+    overflow: hidden;
+}
+
+.footer ul li a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #b4b5b6;
+}
+
+.footer a img {
+    margin-top: 15px;
+}
+
+.footer a span {
+    display: block;
+}

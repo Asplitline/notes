@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            width: 400px;
+            height: 400px;
+            background-color: #aaddcc;
+            /* 主轴 */
+            justify-content: center;
+            /* 侧轴 */
+            /* align-items: center; */
+        }
+
+        .box div {
+            width: 100px;
+            height: 100px;
+            background-color: #aabbcc;
+            /* 写在子元素 */
+            align-self: center;
+        }
+    </style>
+</head>
+<!-- 一父盒子宽度400px,高度400px，内嵌100*100的子盒子
+    ，现要求将子盒子，在父盒子的容器内，上下左右居中 -->
+
+<body>
+    <div class="box">
+        <div></div>
+    </div>
+</body>
+
+</html>
