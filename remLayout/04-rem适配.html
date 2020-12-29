@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 标准尺寸750为准  */
+        /* 屏幕尺寸 / 划分的份数 得到了html里面的文字大小*/
+        /* 页面元素的rem值 =  页面元素在 750像素的下px值 / html 里面的文字大小*/
+        /* 320/15 = 21.333333 */
+        @media screen and (min-width: 320px){
+            html {
+                font-size: 21.333333px;
+            }
+        }
+        @media screen and (min-width: 750px){
+            html {
+                font-size: 50px;
+            }
+        }
+
+        div {
+            width: 2rem;
+            height: 2rem;
+            background-color: #aabbcc;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

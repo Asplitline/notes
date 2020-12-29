@@ -1,0 +1,36 @@
+html {
+    font-size: 14px;
+}
+
+.header {
+    width: 200px;
+    height: 200px;
+    background-color: #aabbcc;
+}
+
+.header a {
+    color: red;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: blue;
+}
+
+.nav {
+    width: 150px;
+    height: 250px;
+    border: 10px solid #000;
+}
+
+.nav .logo {
+    color: green;
+}
+
+.nav::before {
+    content: "before";
+    display: block;
+    width: 2.85714286rem;
+    height: 2.85714286rem;
+    background-color: #aaddcc;
+}

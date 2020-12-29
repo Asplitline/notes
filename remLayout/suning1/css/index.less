@@ -1,0 +1,108 @@
+// 引入common
+@import "common";
+
+@basecolor: #ffc001;
+@basefont: 50;
+
+// body 样式
+body {
+    min-width: 320px;
+    // 分成15份
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2ff;
+}
+
+.search-content {
+    position: fixed;
+    display: flex;
+    top: 0;
+    height: 88rem/@basefont;
+    background-color: @basecolor;
+    width: 750rem/@basefont;
+
+    .classify {
+        width: 44rem/@basefont;
+        height: 70rem/@basefont;
+        margin: 12rem/@basefont 24rem/@basefont 0;
+        background: url(../images/classify.png) no-repeat;
+        background-size: 44rem/@basefont 70rem/@basefont;
+    }
+
+    .search {
+        flex: 1;
+
+        input {
+            outline: none;
+            border: 0;
+            height: 66rem/@basefont;
+            border-radius: 33rem/@basefont;
+            width: 100%;
+            font-size: 25rem/@basefont;
+            color: #757575;
+            padding-left: 55rem/@basefont;
+            background-color: #fff2cc;
+        }
+    }
+
+    .login {
+        width: 36rem/@basefont;
+        height: 60rem/@basefont;
+        margin: 14rem/@basefont 24rem/@basefont 0;
+        background: url(../images/user.png) no-repeat;
+        background-size: 36rem/@basefont 60rem/@basefont;
+    }
+}
+
+// 盒子包图片，设置盒子宽高，图片铺满。
+
+.banner {
+    width: 750rem/@basefont;
+    height: 368rem/@basefont;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ad {
+    display: flex;
+
+    a {
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.nav {
+
+    // width: 750rem/@basefont;
+    li {
+        float: left;
+
+        a {
+            display: flex;
+            width: 150rem/@basefont;
+            height: 140rem/@basefont;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                margin: 10rem/@basefont auto 6rem/@basefont;
+                width: 82rem/@basefont;
+                height: 82rem/@basefont;
+            }
+
+            span {
+                font-size: 25rem/@basefont;
+            }
+        }
+    }
+}

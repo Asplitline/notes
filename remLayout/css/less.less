@@ -1,0 +1,37 @@
+@color:pink;
+@basefont:14px;
+@boder:5px+5;
+
+html {
+    font-size: @basefont;
+}
+.header {
+    width: 200px;
+    height: 200px;
+    background-color: #aabbcc;
+    a {
+        color: red;
+        text-decoration: none;
+        // 伪类、交集选择器、伪元素选择器，需要加&
+        &:hover {
+            color: blue;
+        }
+    }
+}
+.nav {
+    width: 200px - 50;
+    height: 200px + 50px;
+    border: @boder solid #000;
+    .logo {
+        color: green;
+    }
+    &::before {
+        content: "before";
+        display: block;
+        width: 40rem/@basefont;
+        height: 40rem/@basefont;
+        background-color: #aaddcc;
+    }
+}
+
+

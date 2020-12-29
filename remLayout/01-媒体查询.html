@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1. 媒体查询一般按照从大到小或者 从小到大的顺序来  -->
+    <!-- 小于540px 页面的背景颜色变为蓝色 -->
+    <!-- 540 ~ 970 我们的页面颜色改为绿色 -->
+    <!-- 大于等于970 我们页面的颜色改为红色 -->
+    <style>
+        /* min< screen <max */
+        @media screen and (max-width: 539px){
+            html {
+                font-size: 25px;
+            }
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width: 540px){
+            html {
+                font-size: 50px;
+            }
+            body {
+                background-color: green;
+            }
+        }
+
+        @media screen and (min-width: 970px){
+            html {
+                font-size: 100px;
+            }
+            body {
+                background-color: red;
+            }
+        }
+
+        .box {
+            height: 1rem;
+            font-size: 0.5rem;
+            background-color: #abc;
+            color: #fff;
+            text-align: center;
+            line-height: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">媒体查询测试</div>
+</body>
+</html>

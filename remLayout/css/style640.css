@@ -1,0 +1,12 @@
+div {
+    width: 50%;
+    float: left;
+}
+
+div:nth-child(1) {
+    background-color: #aabbcc;
+}
+
+div:nth-child(2) {
+    background-color: #aaddcc;
+}
