@@ -58,7 +58,7 @@ git rm --cached 文件
 
 # 将git仓库中指定的更新记录恢复出来，并且覆盖暂存区和工作目录
 # 版本回退 git log 查看commitID -> 注意版本从高到低
-git rest --hard commitID
+git reset --hard commitID
 
  ```
 
